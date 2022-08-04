@@ -1,0 +1,18 @@
+---
+title: "Leslie Matrix Example"
+author: "Andrew Bartnik"
+format: html
+editor: visual
+---
+
+#Leslie Matrix Example
+
+Model population changes using the same example we did in lecture
+
+```{r}
+
+insect_leslie <- matrix(data = c(0, 0, 600, 0.2, 0, 0, 0, 0.08, 0), 
+                        byrow=TRUE, ncol=3, nrow=3)
+insect_leslie
+```
+

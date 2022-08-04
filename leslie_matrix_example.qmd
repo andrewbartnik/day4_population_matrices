@@ -10,9 +10,33 @@ editor: visual
 Model population changes using the same example we did in lecture
 
 ```{r}
+#Construct matrix
 
 insect_leslie <- matrix(data = c(0, 0, 600, 0.2, 0, 0, 0, 0.08, 0), 
-                        byrow=TRUE, ncol=3, nrow=3)
+                        byrow=TRUE, 
+                        ncol=3, 
+                        nrow=3)
+
 insect_leslie
+
+#Using initial conditions for some calculations
+
+insect_y0 <- c(12000, 700, 500)
+
+insect_y1 <- insect_leslie %*% insect_y0
+
+insect_y1
+
+#generation 2
+
+insect_y2 <- insect_leslie %*% insect_y1
+
+insect_y2
+
+#generation 3
+
+insect_y3 <- insect_leslie %*% insect_y2
+
+insect_y3
 ```
 
